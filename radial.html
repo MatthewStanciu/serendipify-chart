@@ -1,6 +1,7 @@
 <script src="Users/mattbstanciu/Downloads/Chart 2.js/dist/Chart.js"
-
+<canvas id="prefsChart" width="400" height="400"></canvas>
 <script>
+  var ctx = "prefsChart"
   var radial = new Chart(ctx, {
     type: 'radial',
     data: { //get json data
@@ -38,7 +39,29 @@
       "Performing   Administrative   Activities",
       "Performing General   Physical   Activities"],
       datasets: [{
-
+        label: "Importance",
+        data: [0,1,2,3,4,5,6,7],
+        backgroundColor: [
+          'rbga(244,66,66,0.2)', //0
+          'rgba(244,125,66,0.2)', //1
+          'rgba(244,167,66,0.2)', //2
+          'rgba(244,206,66,0.2)', //3
+          'rgba(250,255,0,0.2)', //4
+          'rgba(161,255,0,0.2)', //5
+          'rgba(97,255,0,0.2)', //6
+          'rgba(0,255,12,0.2)' //7
+        ],
+        borderColor: [
+          'rbga(244,66,66,1)', //0
+          'rgba(244,125,66,1)', //1
+          'rgba(244,167,66,1)', //2
+          'rgba(244,206,66,1)', //3
+          'rgba(250,255,0,1)', //4
+          'rgba(161,255,0,1)', //5
+          'rgba(97,255,0,1)', //6
+          'rgba(0,255,12,1)' //7
+        ],
+        borderWidth = 1
       }]
       options: {
         scales: {
